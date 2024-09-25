@@ -10,12 +10,19 @@ body{
 }
 header{
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     /* top:0%;
     left: 0%; */
     width: 100%;
     padding: 10px ;
     background-color: #9f6188;
+    z-index: 5;
+    
 }
+
+
+
 #Home{
     height: 100vh;
     display: flex;
@@ -26,16 +33,13 @@ header{
     background-repeat: no-repeat;
     /* min-height: 100vh; */
 }
-nav{
-    display: flex;
-    justify-content: end;
-    gap: 3%;
-    
-}
+
 nav a{
     color: antiquewhite;
     font-size: 18px;
     text-decoration: none;
+    padding-left: 40px;
+  
 }
 a:hover{
     text-decoration: underline antiquewhite ;
@@ -69,7 +73,7 @@ a:hover{
 /* Skills page */
 #skills{
     height: 100vh;
-    margin-top: 1%;
+    /* margin-top: 1%; */
 }
 .skillpage{
     display: flex;
@@ -83,22 +87,41 @@ a:hover{
     text-align: center;
 }
 
+/* 
+/* .skillpic{
+    display: flex;
+ 
+    
+    width: 300px;
+    height: 300px;
+  margin-left: 35px;
+
+  align-items: center;
+    /* margin-bottom: 150px; */
+
+/* .skillpic img{
+    border: 2px rgb(0, 0, 0) solid;
+    box-sizing: content-box;
+    
+    height: 150px;
+    width: 300px;
+    margin: 70px;
+    margin-top: 0; 
+    margin-left: 20%;
+}  */
 
 .skillpic{
     display: flex;
-    box-sizing: border-box;
-    width: 500px;
-    height: 600px;
-    margin-right: 500px;
-    /* margin-bottom: 150px; */
+    justify-content: center;
+    padding-top: 90px;
 }
+
 .skillpic img{
-    border: 2px rgb(0, 0, 0) solid;
-    margin-right: 50px;
+    width: 250px;
     height: 250px;
-    width: 300px;
-    margin-top: 20%; 
-    margin-left: 30%;
+    border: 2px black solid;
+    margin: 30px;
+    padding: 20px;
 }
 
 #contact {
