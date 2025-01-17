@@ -14,7 +14,9 @@
     <a href="#Home">Home</a>
     <a href="#About-me">About me</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+   
 </nav>
 </header>
 </body>
@@ -31,47 +33,188 @@
                 </section> 
                <!--About section-->
         
-                 <section id="About-me">
-                  <div class="container">
-                    
-                     <h1>About me</h1>
-                
-                     <p>
-                         Hello! I’m Udhaya,  from Tirunelveli district.<br> I have finished  my schooling in 2023. <br> Now I'm focused on improving my technical skills 
-                          <br>and this is my first project using HTML and CSS.   
-                     <br>  I like reading books and discussing about it.
-                      </p>
-                     
-                     
-                    </div>
-                    </section>
+               <section id="About-me">
+                <div class="about-image">
+                    <img src="./assests/images/Profile_img.jpeg" alt="Reading a book">
+                </div>
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <p>
+                        Hi! I'm Udhaya, an aspiring web developer with a keen interest in learning and exploring new technologies. I believe in continuous growth and enjoy discovering innovative ways to solve problems.<br><br>
+                        Apart from coding, I'm deeply passionate about reading and writing, which helps me broaden my perspective and stay creative. I also dream of becoming an activist, contributing to meaningful changes in society and standing up for causes I care about.<br><br>
+                        I'm excited to grow as a developer and make a positive impact through my skills and ideas. Let’s connect and create something amazing together!
+                    </p>
+                </div>
+            </section>
+            <button class="back-to-top" onclick="scrollToTop()">&uarr;</button>
+        
+            <script>
+                window.addEventListener('scroll', () => {
+                    const backToTopButton = document.querySelector('.back-to-top');
+                    if (window.scrollY > 200) {
+                        backToTopButton.classList.add('show');
+                    } else {
+                        backToTopButton.classList.remove('show');
+                    }
+                });
+        
+                function scrollToTop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
         <!--Skill section-->
         <section id="skills">
-              <h2 class="s1">Skills</h2>
-             <!-- <div class="skillpage"> -->
-             <div class="skillpic">
-                
-                <img src="./assests/images/html.icon_png" alt="html_icon">
-                <img src="./assests/images/icon_css_png" alt="css_icon">
-                <img src="./assests/images/js_png" alt="js_icon">
+          <h2 class="s1">Skills</h2>
+          <div class="skillpic">
+              <div class="skill-row">
+                  <div class="skill-item python">
+                      <p>Python</p>
+                      <img src="./assests/images/Python_icon.png" alt="Python Icon">
+                      <div class="tracker">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
+                  <div class="skill-item lifeskills">
+                      <p>LifeSkills</p>
+                      <img src="./assests/images/LifeSkills_icon.png" alt="Life Skills Icon">
+                      <div class="tracker">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
+                  <div class="skill-item html">
+                      <p>HTML</p>
+                      <img src="./assests/images/html.icon_png" alt="HTML Icon">
+                      <div class="tracker">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
               </div>
-         </div>
-         </section>
+              <div class="skill-row">
+                  <div class="skill-item css">
+                      <p>CSS</p>
+                      <img src="./assests/images/icon_css_png" alt="CSS Icon">
+                      <div class="tracker">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
+                  <div class="skill-item js">
+                      <p>JavaScript</p>
+                      <img src="./assests/images/js_png" alt="JavaScript Icon">
+                      <div class="tracker">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
+                  <div class="skill-item english">
+                      <p>English</p>
+                      <img src="./assests/images/English_icon.png" alt="English Icon">
+                      <div class="tracker">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <script>
+          document.querySelectorAll('.skill-item').forEach(skill => {
+              const ratings = {
+                  python: 2,
+                  lifeskills: 4,
+                  html: 5,
+                  css: 4,
+                  js: 3,
+                  english: 4,
+              };
+  
+              const skillClass = skill.classList[1];
+              const stars = skill.querySelectorAll('.tracker span');
+              const rating = ratings[skillClass] || 0;
+  
+              stars.forEach((star, index) => {
+                  if (index < rating) {
+                      star.classList.add('active');
+                  } else {
+                      star.classList.remove('active');
+                  }
+              });
+          });
+      </script>
+       <section id="projects">
+        <h2 class="p1">Projects</h2>
+        <div class="project-gallery">
+          
+            <div class="project-item">
+                <img src="./assests/images/Project1_img.png" alt="Tech Project 1">
+             
+            </div>
+          
+           
+
+            <div class="project-item">
+                <img src="./assests/images/Project2_img.png" alt="Tech Project 2">
+            </div>
+          
+
+            <div class="project-item">
+                <img src="./assests/images/Project3_img.png" alt="Life Skills Project">
+            </div>
+           
+       
+    </section>
 
                <!-- </section> -->
-                  <section id="contact">
-                      <div class="contact-content">
-                      <h1>Contact</h1>
-                          <div>
-                            <a href="https://www.linkedin.com/in/udhaya-s-6407502ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_appimages/linked_icon_png" target="_blank"><img src="./assests/images/linked_icon_png" alt="linkedin icon"></a>
-                          <p><a href="https://www.linkedin.com/in/udhaya-s-6407502ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_appimages/linked_icon_png" target="_blank">linkedin.com/in/Udhaya-s</a></p>
-                           </div>
-                            <div>
-                                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqXxhFbJfpBMhbCFgjbshrcgcgcdxBxPWjPGgTktKxbrRsFCmMPTThSxQKmlbSdjlcBrqV" target="_blank">  <img src="./assests/images/mail_icon_png" alt="Email Icon"></a>
-                                 <p><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqXxhFbJfpBMhbCFgjbshrcgcgcdxBxPWjPGgTktKxbrRsFCmMPTThSxQKmlbSdjlcBrqV" target="_blank">udhaya.sathyan@fssa.freshworks.com</p></a>
-                         </div>
-                        </div>
-                     </section>
+               <section id="contact">
+                <h1>Contact Me</h1>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <img src="./assests/images/linked_icon_png" alt="LinkedIn Icon">
+                        <p><a href="https://www.linkedin.com/in/udhaya-s-6407502ab" target="_blank">linkedin.com/in/Udhaya-s</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="./assests/images/mail_icon_png" alt="Email Icon">
+                        <p><a href="mailto:udhaya.sathyan@fssa.freshworks.com">udhaya.sathyan@fssa.freshworks.com</a></p>
+                    </div>
+                </div>
+            </section>
+            <button class="back-to-top" onclick="scrollToTop()">&uarr;</button>
+        
+            <script>
+                window.addEventListener('scroll', () => {
+                    const backToTopButton = document.querySelector('.back-to-top');
+                    if (window.scrollY > 200) {
+                        backToTopButton.classList.add('show');
+                    } else {
+                        backToTopButton.classList.remove('show');
+                    }
+                });
+        
+                function scrollToTop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
 
 </main>
 </html>
