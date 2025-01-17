@@ -357,8 +357,8 @@ a:hover{
     font-size: 3rem;
     color: #9f6188;
     margin-bottom: 20px;
-    margin-top: -20%;
-    padding-top: 15%
+    margin-top: -33%;
+    padding-top: 18%
 }
 
 .contact-content {
@@ -368,13 +368,14 @@ a:hover{
     gap: 40px;
     flex-wrap: wrap;
     animation: slideIn 2s ease-out;
+    padding-top: 2%;
 }
 
 .contact-item {
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
