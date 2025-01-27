@@ -29,6 +29,9 @@
              <h2>I am Udhaya</h2>
              <h4>Web Developer</h4>
              </div>
+             <div class="Project-container">
+                <a href="https://symphonious-pegasus-541116.netlify.app/">Main Project</a>
+             </div>
                
                 </section> 
                <!--About section-->
@@ -64,105 +67,99 @@
             </script>
         <!--Skill section-->
         <section id="skills">
-          <h2 class="s1">Skills</h2>
-          <div class="skillpic">
-              <div class="skill-row">
-                  <div class="skill-item python">
-                      <p>Python</p>
-                      <img src="./assests/images/Python_icon.png" alt="Python Icon">
-                      <div class="tracker">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                      </div>
-                  </div>
-                  <div class="skill-item lifeskills">
-                      <p>LifeSkills</p>
-                      <img src="./assests/images/LifeSkills_icon.png" alt="Life Skills Icon">
-                      <div class="tracker">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                      </div>
-                  </div>
-                  <div class="skill-item html">
-                      <p>HTML</p>
-                      <img src="./assests/images/html.icon_png" alt="HTML Icon">
-                      <div class="tracker">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="skill-row">
-                  <div class="skill-item css">
-                      <p>CSS</p>
-                      <img src="./assests/images/icon_css_png" alt="CSS Icon">
-                      <div class="tracker">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                      </div>
-                  </div>
-                  <div class="skill-item js">
-                      <p>JavaScript</p>
-                      <img src="./assests/images/js_png" alt="JavaScript Icon">
-                      <div class="tracker">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                      </div>
-                  </div>
-                  <div class="skill-item english">
-                      <p>English</p>
-                      <img src="./assests/images/English_icon.png" alt="English Icon">
-                      <div class="tracker">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <script>
-          document.querySelectorAll('.skill-item').forEach(skill => {
-              const ratings = {
-                  python: 3,
-                  lifeskills: 4,
-                  html: 3,
-                  css: 3,
-                  js: 3,
-                  english: 5,
-              };
-  
-              const skillClass = skill.classList[1];
-              const stars = skill.querySelectorAll('.tracker span');
-              const rating = ratings[skillClass] || 0;
-  
-              stars.forEach((star, index) => {
-                  if (index < rating) {
-                      star.classList.add('active');
-                  } else {
-                      star.classList.remove('active');
-                  }
-              });
-          });
-      </script>
-      <section id="projects">
+            <h2 class="s1">Skills</h2>
+            
+            <div class="skill-category">
+                <h3>Life Skills</h3>
+                <div class="skillpic">
+                    <div class="skill-item writing">
+                        <h4>Writing</h4>
+                        <img src="./assests/images/Writing_icon.png" alt="Writing Icon">
+                    </div>
+                    <div class="skill-item listening">
+                        <h4>Listening</h4>
+                        <img src="./assests/images/Listing_icon.png" alt="Listening Icon">
+                    </div>
+                    <div class="skill-item speaking">
+                        <h4>Speaking</h4>
+                        <img src="./assests/images/Speaking_icon.png" alt="Speaking Icon">
+                    </div>
+                    <div class="skill-item reading">
+                        <h4>Reading</h4>
+                        <img src="./assests/images/Reading_icon.png" alt="Reading Icon">
+                    </div>
+                    <div class="skill-item social">
+                        <h4>Social Skills</h4>
+                        <img src="./assests/images/SocialSkills_icon.png" alt="Social Skills Icon">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                <div class="skillpic">
+                    <div class="skill-item html">
+                        <h4>HTML</h4>
+                        <img src="./assests/images/HTML_icon.png" alt="HTML Icon">
+                    </div>
+                    <div class="skill-item css">
+                        <h4>CSS</h4>
+                        <img src="./assests/images/CSS_icon.png" alt="CSS Icon">
+                    </div>
+                    <div class="skill-item js">
+                        <h4>JavaScript</h4>
+                        <img src="./assests/images/js_png" alt="JavaScript Icon">
+                        
+                    </div>
+                    <div class="skill-item sql">
+                        <h4>SQL</h4>
+                        <img src="./assests/images/SQL_icon.png" alt="SQL Icon">
+                    </div>
+                    <div class="skill-item python">
+                        <h4>Python</h4>
+                        <img src="./assests/images/Python_icon.png" alt="Python Icon">
+                    </div>
+                    <div class="skill-item problem-solving">
+                        <h4>Problem Solving</h4>
+                        <img src="./assests/images/ProblemSolving_icon.png" alt="Problem Solving Icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            document.querySelectorAll('.skill-item').forEach(skill => {
+                const ratings = {
+                    writing: 5,
+                    listening: 4,
+                    speaking: 4,
+                    reading: 5,
+                    social: 4,
+                    html: 3,
+                    css: 3,
+                    js: 3,
+                    sql: 3,
+                    python: 3,
+                    "problem-solving": 3
+                };
+        
+                const skillClass = skill.classList[1];
+                const rating = ratings[skillClass] || 0;
+        
+                const tracker = document.createElement('div');
+                tracker.classList.add('tracker');
+                for (let i = 0; i < 5; i++) {
+                    const star = document.createElement('span');
+                    star.textContent = '★';
+                    if (i < rating) {
+                        star.classList.add('active');
+                    }
+                    tracker.appendChild(star);
+                }
+                skill.appendChild(tracker);
+            });
+        </script>
+     <section id="projects">
         <h2 class="p1">Projects</h2>
         <div class="project-gallery">
             <div class="project-item">
@@ -178,8 +175,16 @@
                 <p class="project-title">Project 3 - Life Skills (Product Building Challenge)</p>
             </div>
         </div>
+    
+        <div class="Project-container">
+            <a href="https://symphonious-pegasus-541116.netlify.app/" 
+               class="main-project-btn" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                Main Project
+            </a>
+        </div>
     </section>
-
                <!-- </section> -->
                <section id="contact">
                 <h1>Contact Me</h1>
